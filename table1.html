@@ -1,0 +1,84 @@
+<!DOCTYPE html
+<html><head>
+ <title>Login Page</title>
+ <style>
+    .login-box {
+    width: 300px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-box input[type="submit"] {
+    width: 100%;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+ </style>
+ <script  lang="javascript">
+
+ </script>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event){
+            event.preventDefault()
+            let username = document.getElementById("uname").value;
+            let password = document.getElementById("psw").value;
+
+            // Implement your logic to authenticate the user
+            // For example, call a web service that verifies the user's credentials
+            // ...
+
+            if(username === "testuser" && password === "testpassword") {
+                alert("Login Successful")
+            } else {
+                alert("Login Failed. Please check your username and password.")
+            }
+        });
+    </script>
+</body>
+</html>
